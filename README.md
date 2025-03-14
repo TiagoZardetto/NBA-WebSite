@@ -1,2 +1,2 @@
 # NBA-landingpage
-Building a NBA landing page who have scoreboards, games schedules and more.
+🏀 Building an NBA landing page that has scoreboards, game schedules, and more! 🏀
