@@ -1,43 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import isOdd from "is-odd";
-import { Lebron } from "./components/lebron";
-import { Durant } from "./components/durant";
-import { Button } from "./components/button";
+import { IndexPage } from "./pages/index/page";
+
 function App() {
-	const [count, setCount] = useState(0);
-	console.log();
+	
 	return (
 		<>
-			<div class="text-3xl text-red-400 mb-14 font-bold underline">
-				Hello world!
-			</div>
-			<Button />
-			<Durant />
-			<div>
-				<a href="https://vite.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<Lebron />
-					<img
-						src={reactLogo}
-						className="logo react"
-						alt="React logo"
-					/>
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+			<IndexPage />
 		</>
 	);
 }
