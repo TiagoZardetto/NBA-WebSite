@@ -34,6 +34,7 @@ export default defineConfig(
 				...reactHooks.configs.recommended.rules,
 				...reactRefresh.configs.vite.rules,
 				"no-unused-vars": ["warn", { varsIgnorePattern: "^_" }],
+				"react/prop-types": "off",
 			},
 		},
 	],
