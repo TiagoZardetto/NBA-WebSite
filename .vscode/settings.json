@@ -1,17 +1,17 @@
 {
 	"windowColors.🌈 BaseColor": "#F38BA8",
 	"workbench.colorCustomizations": {
-    "activityBar.background": "#F38BA8",
-    "titleBar.activeBackground": "#FEF3F6",
-    "titleBar.activeForeground": "#370613",
-    "focusBorder": "#8b43ffc2",
-    "window.activeBorder": "#ff4343c2",
-    "tab.hoverBackground": "#c281ff2a",
-    "list.hoverBackground": "#91e0ff70",
-    "list.hoverForeground": "#FFFFFFbb",
-    "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#9fced11f"
-  },
+		"activityBar.background": "#F38BA8",
+		"titleBar.activeBackground": "#FEF3F6",
+		"titleBar.activeForeground": "#370613",
+		"focusBorder": "#8b43ffc2",
+		"window.activeBorder": "#ff4343c2",
+		"tab.hoverBackground": "#c281ff2a",
+		"list.hoverBackground": "#91e0ff70",
+		"list.hoverForeground": "#FFFFFFbb",
+		"editor.lineHighlightBackground": "#1073cf2d",
+		"editor.lineHighlightBorder": "#9fced11f"
+	},
 	"postman.settings.dotenv-detection-notification-visibility": false,
 	"workbench.sideBar.location": "right",
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",

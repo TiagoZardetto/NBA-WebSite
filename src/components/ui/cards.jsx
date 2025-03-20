@@ -1,19 +1,8 @@
-const Cards = ({ children, className, titulo, texto, image }) => {
+const Cards = ({ children, className, texto, image }) => {
 	return (
-		<div className="overflow-hidden rounded-lg bg-white shadow-md">
-			{image && (
-				<div className="h-40">
-					<img
-						src={image}
-						alt={titulo}
-						className="h-full w-full object-cover"
-					/>
-				</div>
-			)}
-			<div className="p-4">
-				<h3 className="mb-2 text-lg font-medium">{titulo}</h3>
-				<p className="text-gray-600">{texto}</p>
-			</div>
+		<div
+			className={`flex h-[33rem] w-full max-w-80 flex-col justify-center overflow-hidden rounded-lg p-5 ${className}`}
+		>
 			{children}
 		</div>
 	);
