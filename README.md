@@ -1,11 +1,11 @@
 # 🏀 NBA Landing Page
 
-Este projeto consiste na criação de uma **landing page** inspirada na NBA, desenvolvida com **HTML**, **CSS**, e **Bootstrap**. O objetivo é proporcionar uma interface moderna e atrativa para fãs de basquete, com foco em design visual, responsividade e interatividade.
+Este projeto consiste na criação de uma **landing page** inspirada na NBA, desenvolvida com **React.Js** e **TailwindCSS**. O objetivo é proporcionar uma interface moderna e atrativa para fãs de basquete, com foco em design visual, responsividade e interatividade.
 
 ## 🎯 Objetivos
 
-- Praticar os fundamentos de **HTML semântico** e **CSS moderno**.
-- Aplicar o **framework Bootstrap** para garantir design responsivo e consistência visual.
+- Praticar os fundamentos de **React.Js** e **TailwindCSS**.
+- Aplicar o **TailwindCss** para garantir design responsivo e consistência visual.
 - Criar uma landing page com elementos visuais típicos do universo NBA (cores vibrantes, tipografia forte, imagens impactantes).
 
 ## 🎨 Funcionalidades e Seções
@@ -19,17 +19,16 @@ Este projeto consiste na criação de uma **landing page** inspirada na NBA, des
 
 ## 🛠 Tecnologias Utilizadas
 
-- 🧱 **HTML5**
-- 🎨 **CSS3**
-- ⚙️ **Bootstrap 4/5** (Grid, componentes e responsividade)
+- 🧱 **ReactJS** (Componentes)
+- 🎨 **TailwindCss** (Grid e Responsividades)
 
 ## 📚 Aprendizados
 
 Este projeto foi um excelente laboratório para:
 
-- Estruturação de layout com **HTML semântico**.
-- Estilização avançada com **CSS**, incluindo flexbox, responsividade e pseudo-elementos.
-- Manipulação de componentes Bootstrap, como grid, carrossel, navbar e botões interativos.
+- Estruturação de layout com **React.Js**.
+- Estilização avançada com **TailwindCss**, incluindo flexbox, responsividade e pseudo-elementos.
+- Manipulação de componentes TailwindCSS, como grid, carrossel, navbar e botões interativos.
 - Harmonização visual com **paleta vibrante**, tipografia chamativa e imagens de alta qualidade.
 
 ## 🖥️ Como Rodar Localmente
