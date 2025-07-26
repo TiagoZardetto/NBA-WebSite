@@ -48,12 +48,15 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className="flex justify-center p-4 pb-4">
-				<div className="grid w-full grid-flow-col grid-cols-3 justify-items-center gap-4">
+				<div className="grid w-full grid-flow-col grid-cols-4 justify-items-center gap-4">
 					<Information className="bg-[url(/images/durant-teste1.jpg)] bg-cover bg-center p-4 text-xl text-[#DCE0D9] transition-all duration-400 ease-out">
 						<p>Maiores Campeões</p>
 					</Information>
 					<Information className="p-4 text-xl text-[#DCE0D9]">
 						<p>Jogos Históricos</p>
+					</Information>
+					<Information className="p-4 text-xl text-[#DCE0D9]">
+						<p>Jogadores Lendários</p>
 					</Information>
 					<Information className="p-4 text-xl text-[#DCE0D9]">
 						<p>Jogadores Lendários</p>
@@ -84,10 +87,38 @@ const IndexPage = () => {
 				Ambas as associações conseguiram se expandir com o passar dos anos, com
 				a NBA saindo de 9 para 18 franquias. A rivalidade se manteve até 1976,
 				quando ambas as ligas chegaram a um acordo para se fundirem, e a NBA
-				absorveu mais 4 equipes da ABA, chegando a 22 times.
+				absorveu mais 4 equipes da ABA, chegando a 22 times. Em 3 de agosto de
+				1949, a BAA aceitou se fundir com a NBL, criando a nova National
+				Basketball Association (NBA).[7] A nova liga tinha 17 franquias
+				localizadas em uma mistura de cidades grandes e pequenas,[7] bem como
+				grandes e pequenos ginásios. Em 1950, a NBA se consolidou em 11
+				franquias, um processo que continuou até 1953-54, quando o campeonato
+				atingiu o seu menor tamanho de oito franquias, os quais todos ainda
+				estão na liga (New York Knicks, Boston Celtics, Golden State Warriors,
+				Los Angeles Lakers, Sacramento Kings, Detroit Pistons, Atlanta Hawks, e
+				Philadelphia 76ers). O processo de contração fez com que as franquias
+				das menores cidades se movessem para grandes mercados. Os Hawks saíram
+				de Tri-Cities (conhecidas como Quad Cities) para Milwaukee em 1951 e
+				então para St. Louis, Missouri em 1955; os Royals foram de Rochester
+				para Cincinnati (em 1957); e os Pistons de Fort Wayne, Indiana para
+				Detroit (em 1957). Enquanto isso, o Nipo-americano Wataru Misaka quebrou
+				a barreira de raças na NBA na temporada 1948-49 quando jogou pelos New
+				York Knicks, 1950 é conhecido como o ano em que a NBA se integrou. Em 26
+				de Abril de 1950, Harold Hunter assinou com os Washington Capitols, se
+				tornando o primeiro Afro-americano a assinar um contrato com qualquer
+				time na NBA na história.[8][9] Hunter foi cortado durante o training
+				camp,[8][10] porém vários Afro-americanos começaram a jogar na liga no
+				final daquele ano, como Chuck Cooper com os Celtics, Nathaniel Clifton
+				com os Knicks e Earl Lloyd com os Washington Capitols. Nesse meio tempo,
+				os Minneapolis Lakers, liderados pelo pivô George Mikan, ganhou 5
+				títulos da NBA e estabilizou o time pela primeira dinastia da NBA.[11]
+				Para encorajar os arremessos e desencorajar calmaria, a NBA criou o
+				cronômetro de 24 segundos em 1954.[12] Se um time não tentar um
+				arremesso (ou não encostar no aro), em 24 segundos de jogada, a jogada
+				acaba e a posse de bola passa para seu oponente.
 			</p>
 			<div className="font-anton ml-3 flex justify-start pt-30 text-6xl">
-				LIGA
+				A LIGA
 				<p className="font-russo mr-5 ml-3 flex justify-end pl-4 text-justify text-xl">
 					A NBA foi fundada em 6 de junho de 1946, originalmente chamada de
 					Basketball Association of America (BAA), em Nova York. Seus primeiros
