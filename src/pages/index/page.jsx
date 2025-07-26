@@ -16,25 +16,25 @@ const IndexPage = () => {
 			<div className="grid-col-1 grid w-full max-w-[90%] grid-flow-row justify-items-center gap-2 place-self-center pt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 				<Cards className="group relative hover:brightness-100">
 					<div className="absolute inset-0 bg-[url(/images/lebron-3.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 text-end text-lg text-[#FFBF47] transition-all duration-500 group-hover:hue-rotate-15">
+					<div className="font-exo z-10 translate-y-10 text-end text-xl text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 						The King
 					</div>
 				</Cards>
 				<Cards className="group relative hover:brightness-100">
 					<div className="absolute inset-0 bg-[url(/images/doncic-teste.webp)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 text-end text-lg text-[#FFBF47] transition-all duration-500 group-hover:hue-rotate-15">
+					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 						Magician
 					</div>
 				</Cards>
 				<Cards className="group relative hover:brightness-100">
 					<div className="absolute inset-0 bg-[url(/images/curry-teste1.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 text-end text-lg text-[#FFBF47] transition-all duration-500 group-hover:hue-rotate-15">
+					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 						Chef Curry
 					</div>
 				</Cards>
 				<Cards className="group relative hover:brightness-100">
 					<div className="absolute inset-0 bg-[url(/images/durant-teste1.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 text-end text-lg text-[#FFBF47] transition-all duration-500 group-hover:hue-rotate-15">
+					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 						Money Sniper
 					</div>
 				</Cards>
