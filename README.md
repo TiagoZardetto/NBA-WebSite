@@ -7,15 +7,14 @@ Este projeto consiste na criação de uma **landing page** inspirada na NBA, des
 - Praticar os fundamentos de **React.Js** e **TailwindCSS**.
 - Aplicar o **TailwindCss** para garantir design responsivo e consistência visual.
 - Criar uma landing page com elementos visuais típicos do universo NBA (cores vibrantes, tipografia forte, imagens impactantes).
+- Trazer informações relevantes dos principais jogadores da liga.
 
 ## 🎨 Funcionalidades e Seções
 
-- **Cabeçalho com Menu Fixo:** Navegação clara e acessível em todas as seções.
 - **Hero Section:** Banner principal com chamada para ação e visual impactante.
-- **Seções de Destaques:** Cards ou blocos destacando notícias, estatísticas e jogadores.
-- **Grid Responsivo:** Estruturei conteúdo utilizando o sistema de grid do Bootstrap, adaptável a diversos tamanhos de tela.
+- **Seções de Destaques:** Criei um Modal com informações de jogadores.
+- **Grid Responsivo:** Estruturei conteúdo utilizando o sistema de grid, adaptável a diversos tamanhos de tela.
 - **Galeria ou Carousel:** Exibição dinâmica de imagens de jogadores ou momentos da NBA.
-- **Rodapé Informativo:** Links úteis, redes sociais e informações sobre o projeto.
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -27,7 +26,7 @@ Este projeto consiste na criação de uma **landing page** inspirada na NBA, des
 Este projeto foi um excelente laboratório para:
 
 - Estruturação de layout com **React.Js**.
-- Estilização avançada com **TailwindCss**, incluindo flexbox, responsividade e pseudo-elementos.
+- Utilização de useStates
 - Manipulação de componentes TailwindCSS, como grid, carrossel, navbar e botões interativos.
 - Harmonização visual com **paleta vibrante**, tipografia chamativa e imagens de alta qualidade.
 
