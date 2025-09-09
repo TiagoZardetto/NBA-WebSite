@@ -1,12 +1,38 @@
 import { Button } from "../../components/ui/button";
 import { Cards } from "../../components/ui/cards";
 import { Information } from "../../components/ui/information-card";
-
+import { useState } from "react";
+import Modal from "../../components/ui/modal";
 const IndexPage = () => {
+	const [selected, setSelected] = useState(null);
+
+	const players = [
+		{
+			img: "/images/lebron-3.jpg",
+			title: "The King",
+			bio: "Apenas o cabra.",
+		},
+		{
+			img: "/images/doncic-teste.webp",
+			title: "Magician",
+			bio: "Meu tesouro.",
+		},
+		{
+			img: "/images/curry-teste1.jpg",
+			title: "Chef Curry",
+			bio: "O chefe é pika, não tem jeito",
+		},
+		{
+			img: "/images/durant-teste1.jpg",
+			title: "Money Sniper",
+			bio: "Slim Reaper, é o homi.",
+		},
+	];
+
 	return (
 		<div className="flex size-full flex-col justify-start gap-4 p-4">
 			<div className="my-4 flex justify-center">
-				<div className="grid w-full max-w-[80%] grid-flow-col grid-cols-4 justify-items-center p-2">
+				<div className="grid w-full max-w-[90%] grid-flow-col grid-cols-4 justify-items-center p-2">
 					<Button>HISTÓRIA</Button>
 					<Button>A LIGA</Button>
 					<Button>JOGADORES</Button>
@@ -14,31 +40,22 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className="grid-col-1 grid w-full max-w-[90%] grid-flow-row justify-items-center gap-2 place-self-center pt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-				<Cards className="group relative hover:brightness-100">
-					<div className="absolute inset-0 bg-[url(/images/lebron-3.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 translate-y-10 text-end text-xl text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-						The King
-					</div>
-				</Cards>
-				<Cards className="group relative hover:brightness-100">
-					<div className="absolute inset-0 bg-[url(/images/doncic-teste.webp)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-						Magician
-					</div>
-				</Cards>
-				<Cards className="group relative hover:brightness-100">
-					<div className="absolute inset-0 bg-[url(/images/curry-teste1.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-						Chef Curry
-					</div>
-				</Cards>
-				<Cards className="group relative hover:brightness-100">
-					<div className="absolute inset-0 bg-[url(/images/durant-teste1.jpg)] bg-cover bg-center brightness-[0.3] transition-all duration-400 ease-out group-hover:scale-125 group-hover:brightness-[0.6]"></div>
-					<div className="font-exo z-10 translate-y-10 text-end text-lg text-[#FFBF47] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-						Money Sniper
-					</div>
-				</Cards>
+				{players.map((p, i) => (
+					<Cards
+						key={i}
+						img={p.img}
+						title={p.title}
+						onClick={() => setSelected(p)}
+					/>
+				))}
 			</div>
+			<Modal
+				isOpen={!!selected}
+				onClose={() => setSelected(null)}
+				title={selected?.title}
+				img={selected?.img}
+				bio={selected?.bio}
+			/>
 			<div className="mt-30 flex justify-center p-4">
 				<div className="font-anton justify-items-center text-7xl text-[#DCE0D9]">
 					EXPLORE O MUNDO DA LIGA
@@ -48,12 +65,15 @@ const IndexPage = () => {
 				</div>
 			</div>
 			<div className="flex justify-center p-4 pb-4">
-				<div className="grid w-full grid-flow-col grid-cols-4 justify-items-center gap-4">
+				<div className="grid w-full grid-flow-col grid-cols-5 justify-items-center gap-5">
 					<Information className="bg-[url(/images/durant-teste1.jpg)] bg-cover bg-center p-4 text-xl text-[#DCE0D9] transition-all duration-400 ease-out">
 						<p>Maiores Campeões</p>
 					</Information>
 					<Information className="p-4 text-xl text-[#DCE0D9]">
-						<p>Jogos Históricos</p>
+						<p>Finais Históricas</p>
+					</Information>
+					<Information className="p-4 text-xl text-[#DCE0D9]">
+						<p>Jogadores Lendários</p>
 					</Information>
 					<Information className="p-4 text-xl text-[#DCE0D9]">
 						<p>Jogadores Lendários</p>
