@@ -1,168 +1,154 @@
-import { Button } from "../../components/ui/button";
+import { useState, useEffect, useRef } from "react";
 import { Cards } from "../../components/ui/cards";
-import { Information } from "../../components/ui/information-card";
-import { useState } from "react";
 import Modal from "../../components/ui/modal";
+import { Hero } from "../../components/ui/hero";
+import { Navbar } from "../../components/ui/navbar";
+import { StatsTicker } from "../../components/ui/stats-ticker";
+import { ExploreSection } from "../../components/ui/explore-section";
+import { Timeline } from "../../components/ui/timeline";
+import { LeagueSection } from "../../components/ui/league-section";
+import { Footer } from "../../components/ui/footer";
+
+const players = [
+	{
+		img: "/images/lebron-3.jpg",
+		title: "LEBRON JAMES",
+		subtitle: "THE KING",
+		number: "23",
+		bio: "O Rei. LeBron Raymone James é considerado um dos maiores jogadores de todos os tempos. Com 4 títulos da NBA, 4 MVPs e o recorde de maior pontuador da história, LeBron redefiniu o que significa grandeza no basquete.",
+		stats: [
+			{ value: "40K+", label: "PONTOS" },
+			{ value: "4x", label: "CAMPEÃO" },
+			{ value: "4x", label: "MVP" },
+		],
+	},
+	{
+		img: "/images/doncic-teste.webp",
+		title: "LUKA DONČIĆ",
+		subtitle: "THE MAGICIAN",
+		number: "77",
+		bio: "O mágico esloveno que conquistou a Europa antes dos 20 anos e agora domina a NBA. Luka combina visão de jogo excepcional com habilidade de pontuação que lembra os maiores de todos os tempos.",
+		stats: [
+			{ value: "28.7", label: "PPG" },
+			{ value: "8.3", label: "RPG" },
+			{ value: "8.0", label: "APG" },
+		],
+	},
+	{
+		img: "/images/curry-teste1.jpg",
+		title: "STEPHEN CURRY",
+		subtitle: "CHEF CURRY",
+		number: "30",
+		bio: "O maior arremessador de três pontos da história da NBA. Stephen Curry revolucionou o basquete moderno e liderou o Golden State Warriors a 4 títulos, mudando para sempre como o jogo é jogado.",
+		stats: [
+			{ value: "3.7K+", label: "BOLAS DE 3" },
+			{ value: "4x", label: "CAMPEÃO" },
+			{ value: "2x", label: "MVP" },
+		],
+	},
+	{
+		img: "/images/durant-teste1.jpg",
+		title: "KEVIN DURANT",
+		subtitle: "THE SLIM REAPER",
+		number: "35",
+		bio: "O pontuador mais puro que o basquete já viu. Com 2.13m de altura e habilidade de armador, Kevin Durant é virtualmente indefensável. Slim Reaper, Easy Money Sniper — as lendas têm muitos nomes.",
+		stats: [
+			{ value: "27.3", label: "PPG CARREIRA" },
+			{ value: "2x", label: "CAMPEÃO" },
+			{ value: "2x", label: "MVP FINAIS" },
+		],
+	},
+];
+
+const PlayersSection = ({ onSelectPlayer }) => {
+	const ref = useRef(null);
+	const [visible, setVisible] = useState(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) setVisible(true);
+			},
+			{ threshold: 0.1 }
+		);
+		if (ref.current) observer.observe(ref.current);
+		return () => observer.disconnect();
+	}, []);
+
+	return (
+		<section id="players" ref={ref} className="bg-nba-deep relative py-32">
+			{/* Background accent */}
+			<div className="from-nba-blue/5 pointer-events-none absolute top-0 right-0 h-full w-1/3 bg-gradient-to-l to-transparent" />
+
+			<div className="mx-auto max-w-7xl px-6">
+				{/* Section header */}
+				<div
+					className={`mb-16 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+				>
+					<div className="flex items-end justify-between">
+						<div>
+							<span className="font-dm text-nba-red mb-4 inline-block text-xs tracking-[0.3em]">
+								DESTAQUES
+							</span>
+							<h2 className="font-bebas text-nba-white text-7xl tracking-tight md:text-8xl">
+								JOGADORES
+							</h2>
+						</div>
+						<div className="hidden md:block">
+							<div className="font-dm text-nba-silver/30 text-right text-sm">
+								<span className="text-nba-gold">4</span> ESTRELAS EM DESTAQUE
+							</div>
+						</div>
+					</div>
+					<div className="from-nba-gold/30 via-nba-gold/10 mt-4 h-px w-full bg-gradient-to-r to-transparent" />
+				</div>
+
+				{/* Player cards grid */}
+				<div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
+					{players.map((p, i) => (
+						<div
+							key={i}
+							className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+							style={{ transitionDelay: `${200 + i * 150}ms` }}
+						>
+							<Cards
+								img={p.img}
+								title={p.title}
+								subtitle={p.subtitle}
+								number={p.number}
+								onClick={() => onSelectPlayer(p)}
+							/>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+};
+
 const IndexPage = () => {
 	const [selected, setSelected] = useState(null);
 
-	const players = [
-		{
-			img: "/images/lebron-3.jpg",
-			title: "The King",
-			bio: "Apenas o cabra.",
-		},
-		{
-			img: "/images/doncic-teste.webp",
-			title: "Magician",
-			bio: "Meu tesouro.",
-		},
-		{
-			img: "/images/curry-teste1.jpg",
-			title: "Chef Curry",
-			bio: "O chefe é pika, não tem jeito",
-		},
-		{
-			img: "/images/durant-teste1.jpg",
-			title: "Money Sniper",
-			bio: "Slim Reaper, é o homi.",
-		},
-	];
-
 	return (
-		<div className="flex size-full flex-col justify-start gap-4 p-4">
-			<div className="my-4 flex justify-center">
-				<div className="grid w-full max-w-[90%] grid-flow-col grid-cols-4 justify-items-center p-2">
-					<Button>HISTÓRIA</Button>
-					<Button>A LIGA</Button>
-					<Button>JOGADORES</Button>
-					<Button>PORTFÓLIO</Button>
-				</div>
-			</div>
-			<div className="grid-col-1 grid w-full max-w-[90%] grid-flow-row justify-items-center gap-2 place-self-center pt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-				{players.map((p, i) => (
-					<Cards
-						key={i}
-						img={p.img}
-						title={p.title}
-						onClick={() => setSelected(p)}
-					/>
-				))}
-			</div>
+		<div className="flex w-full flex-col">
+			<Navbar />
+			<Hero />
+			<StatsTicker />
+			<PlayersSection onSelectPlayer={setSelected} />
+			<ExploreSection />
+			<Timeline />
+			<LeagueSection />
+			<Footer />
+
 			<Modal
 				isOpen={!!selected}
 				onClose={() => setSelected(null)}
 				title={selected?.title}
+				subtitle={selected?.subtitle}
 				img={selected?.img}
 				bio={selected?.bio}
+				stats={selected?.stats}
 			/>
-			<div className="mt-30 flex justify-center p-4">
-				<div className="font-anton justify-items-center text-7xl text-[#DCE0D9]">
-					EXPLORE O MUNDO DA LIGA
-					<p className="font-russo pt-2 text-xl text-[#DCE0D9]">
-						Fique por dentro do mundo do basquete
-					</p>
-				</div>
-			</div>
-			<div className="flex justify-center p-4 pb-4">
-				<div className="grid w-full grid-flow-col grid-cols-5 justify-items-center gap-5">
-					<Information className="bg-[url(/images/durant-teste1.jpg)] bg-cover bg-center p-4 text-xl text-[#DCE0D9] transition-all duration-400 ease-out">
-						<p>Maiores Campeões</p>
-					</Information>
-					<Information className="p-4 text-xl text-[#DCE0D9]">
-						<p>Finais Históricas</p>
-					</Information>
-					<Information className="p-4 text-xl text-[#DCE0D9]">
-						<p>Jogadores Lendários</p>
-					</Information>
-					<Information className="p-4 text-xl text-[#DCE0D9]">
-						<p>Jogadores Lendários</p>
-					</Information>
-					<Information className="p-4 text-xl text-[#DCE0D9]">
-						<p>Jogadores Lendários</p>
-					</Information>
-				</div>
-			</div>
-			<div className="font-anton ml-3 flex justify-start pt-30 text-6xl">
-				HISTÓRIA
-			</div>
-			<p className="font-russo ml-3 flex justify-start text-justify text-xl">
-				A NBA foi fundada em 6 de junho de 1946, originalmente chamada de
-				Basketball Association of America (BAA), em Nova York. Seus primeiros
-				anos foram marcados por desafios, incluindo a concorrência com a
-				National Basketball League (NBL), com a qual se fundiu em 1949 para
-				formar a NBA conhecida hoje. Como já era de se imaginar, as mudanças de
-				regras surtiram efeito e tornaram a liga mais atrativa para o público.
-				Dessa forma a liga se consolidou, já no final dos anos 50 e começo dos
-				60. Esse período também foi marcado pela forte hegemonia do Boston
-				Celtics que acumulou 9 títulos em 10 anos, se consagrando como um dos
-				times mais vitoriosos da NBA. Em meio a tudo isso, em 1967 surgiu a
-				American Basketball Association (ABA), uma outra organização com a
-				intenção de desafiar a NBA. Para isso, a liga apostou em um jogo mais
-				ousado e inovador, usando a bola colorida e criando a conhecida linha de
-				três pontos. Os anos seguintes foram de forte disputa entre as ligas,
-				que visavam atrair os melhores jogadores, árbitros e técnicos para as
-				suas competições. No fim, quem saiu ganhando foram justamente os
-				jogadores, que tiveram um belo aumento salarial a partir da disputa.
-				Ambas as associações conseguiram se expandir com o passar dos anos, com
-				a NBA saindo de 9 para 18 franquias. A rivalidade se manteve até 1976,
-				quando ambas as ligas chegaram a um acordo para se fundirem, e a NBA
-				absorveu mais 4 equipes da ABA, chegando a 22 times. Em 3 de agosto de
-				1949, a BAA aceitou se fundir com a NBL, criando a nova National
-				Basketball Association (NBA).[7] A nova liga tinha 17 franquias
-				localizadas em uma mistura de cidades grandes e pequenas,[7] bem como
-				grandes e pequenos ginásios. Em 1950, a NBA se consolidou em 11
-				franquias, um processo que continuou até 1953-54, quando o campeonato
-				atingiu o seu menor tamanho de oito franquias, os quais todos ainda
-				estão na liga (New York Knicks, Boston Celtics, Golden State Warriors,
-				Los Angeles Lakers, Sacramento Kings, Detroit Pistons, Atlanta Hawks, e
-				Philadelphia 76ers). O processo de contração fez com que as franquias
-				das menores cidades se movessem para grandes mercados. Os Hawks saíram
-				de Tri-Cities (conhecidas como Quad Cities) para Milwaukee em 1951 e
-				então para St. Louis, Missouri em 1955; os Royals foram de Rochester
-				para Cincinnati (em 1957); e os Pistons de Fort Wayne, Indiana para
-				Detroit (em 1957). Enquanto isso, o Nipo-americano Wataru Misaka quebrou
-				a barreira de raças na NBA na temporada 1948-49 quando jogou pelos New
-				York Knicks, 1950 é conhecido como o ano em que a NBA se integrou. Em 26
-				de Abril de 1950, Harold Hunter assinou com os Washington Capitols, se
-				tornando o primeiro Afro-americano a assinar um contrato com qualquer
-				time na NBA na história.[8][9] Hunter foi cortado durante o training
-				camp,[8][10] porém vários Afro-americanos começaram a jogar na liga no
-				final daquele ano, como Chuck Cooper com os Celtics, Nathaniel Clifton
-				com os Knicks e Earl Lloyd com os Washington Capitols. Nesse meio tempo,
-				os Minneapolis Lakers, liderados pelo pivô George Mikan, ganhou 5
-				títulos da NBA e estabilizou o time pela primeira dinastia da NBA.[11]
-				Para encorajar os arremessos e desencorajar calmaria, a NBA criou o
-				cronômetro de 24 segundos em 1954.[12] Se um time não tentar um
-				arremesso (ou não encostar no aro), em 24 segundos de jogada, a jogada
-				acaba e a posse de bola passa para seu oponente.
-			</p>
-			<div className="font-anton ml-3 flex justify-start pt-30 text-6xl">
-				A LIGA
-				<p className="font-russo mr-5 ml-3 flex justify-end pl-4 text-justify text-xl">
-					A NBA foi fundada em 6 de junho de 1946, originalmente chamada de
-					Basketball Association of America (BAA), em Nova York. Seus primeiros
-					anos foram marcados por desafios, incluindo a concorrência com a
-					National Basketball League (NBL), com a qual se fundiu em 1949 para
-					formar a NBA conhecida hoje. Como já era de se imaginar, as mudanças
-					de regras surtiram efeito e tornaram a liga mais atrativa para o
-					público. Dessa forma a liga se consolidou, já no final dos anos 50 e
-					começo dos 60. Esse período também foi marcado pela forte hegemonia do
-					Boston Celtics que acumulou 9 títulos em 10 anos, se consagrando como
-					um dos times mais vitoriosos da NBA. Em meio a tudo isso, em 1967
-					surgiu a American Basketball Association (ABA), uma outra organização
-					com a intenção de desafiar a NBA. Para isso, a liga apostou em um jogo
-					mais ousado e inovador, usando a bola colorida e criando a conhecida
-					linha de três pontos. Os anos seguintes foram de forte disputa entre
-					as ligas, que visavam atrair os melhores jogadores, árbitros e
-					técnicos para as suas competições. No fim, quem saiu ganhando foram
-					justamente os jogadores, que tiveram um belo aumento salarial a partir
-					da disputa. Ambas as associações conseguiram se expandir com o passar
-					dos anos, com a NBA saindo de 9 para 18 franquias. A rivalidade se
-					manteve até 1976, quando ambas as ligas chegaram a um acordo para se
-					fundirem, e a NBA absorveu mais 4 equipes da ABA, chegando a 22 times.
-				</p>
-			</div>
 		</div>
 	);
 };
