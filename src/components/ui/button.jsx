@@ -1,10 +1,24 @@
-const Button = ({ children, className }) => {
+const Button = ({ children, className, variant = "primary", onClick }) => {
+	const base =
+		"font-dm cursor-pointer text-sm font-semibold tracking-wider transition-all duration-300 rounded-sm";
+
+	const variants = {
+		primary:
+			"bg-nba-gold text-nba-deep border-2 border-nba-gold px-7 py-3 hover:bg-transparent hover:text-nba-gold",
+		secondary:
+			"bg-transparent text-nba-silver border border-nba-silver/30 px-7 py-3 hover:border-nba-gold/50 hover:text-nba-gold",
+		ghost:
+			"bg-transparent text-nba-gold border-none px-4 py-2 hover:text-nba-white",
+	};
+
 	return (
 		<button
-			className={`py-0.15 font-russo active:bg-outline-blue-600 w-50 cursor-pointer rounded-lg bg-[#6B0F1A] px-1 text-xl text-[#DCE0D9] shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-blue-600 hover:shadow-md hover:shadow-blue-500 focus:outline-blue-600 ${className}`}
+			className={`${base} ${variants[variant]} ${className || ""}`}
+			onClick={onClick}
 		>
 			{children}
 		</button>
 	);
 };
+
 export { Button };
