@@ -15,31 +15,34 @@ const LeagueSection = () => {
 		return () => observer.disconnect();
 	}, []);
 
+	const nbaLogoUrl = (teamId) =>
+		`https://cdn.nba.com/logos/nba/${teamId}/global/L/logo.svg`;
+
 	const conferences = [
 		{
 			name: "CONFERÊNCIA LESTE",
 			teams: [
-				"Boston Celtics",
-				"Milwaukee Bucks",
-				"Philadelphia 76ers",
-				"Miami Heat",
-				"New York Knicks",
-				"Cleveland Cavaliers",
-				"Brooklyn Nets",
-				"Atlanta Hawks",
+				{ name: "Boston Celtics", logo: nbaLogoUrl(1610612738) },
+				{ name: "Milwaukee Bucks", logo: nbaLogoUrl(1610612749) },
+				{ name: "Philadelphia 76ers", logo: nbaLogoUrl(1610612755) },
+				{ name: "Miami Heat", logo: nbaLogoUrl(1610612748) },
+				{ name: "New York Knicks", logo: nbaLogoUrl(1610612752) },
+				{ name: "Cleveland Cavaliers", logo: nbaLogoUrl(1610612739) },
+				{ name: "Brooklyn Nets", logo: nbaLogoUrl(1610612751) },
+				{ name: "Atlanta Hawks", logo: nbaLogoUrl(1610612737) },
 			],
 		},
 		{
 			name: "CONFERÊNCIA OESTE",
 			teams: [
-				"Denver Nuggets",
-				"Los Angeles Lakers",
-				"Golden State Warriors",
-				"Phoenix Suns",
-				"Dallas Mavericks",
-				"Oklahoma City Thunder",
-				"Minnesota Timberwolves",
-				"Sacramento Kings",
+				{ name: "Denver Nuggets", logo: nbaLogoUrl(1610612743) },
+				{ name: "Los Angeles Lakers", logo: nbaLogoUrl(1610612747) },
+				{ name: "Golden State Warriors", logo: nbaLogoUrl(1610612744) },
+				{ name: "Phoenix Suns", logo: nbaLogoUrl(1610612756) },
+				{ name: "Dallas Mavericks", logo: nbaLogoUrl(1610612742) },
+				{ name: "Oklahoma City Thunder", logo: nbaLogoUrl(1610612760) },
+				{ name: "Minnesota Timberwolves", logo: nbaLogoUrl(1610612750) },
+				{ name: "Sacramento Kings", logo: nbaLogoUrl(1610612758) },
 			],
 		},
 	];
@@ -96,14 +99,18 @@ const LeagueSection = () => {
 							<div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
 								{conf.teams.map((team, ti) => (
 									<div
-										key={team}
+										key={team.name}
 										className="font-dm group border-nba-silver/5 bg-nba-deep/50 text-nba-silver/60 hover:border-nba-gold/20 hover:text-nba-white flex items-center gap-3 rounded-md border px-4 py-3 text-sm transition-all duration-300"
 										style={{
 											transitionDelay: `${400 + ti * 50}ms`,
 										}}
 									>
-										<span className="bg-nba-red group-hover:bg-nba-gold h-1.5 w-1.5 rounded-full transition-colors duration-300" />
-										{team}
+										<img
+											src={team.logo}
+											alt={team.name}
+											className="h-6 w-6 object-contain"
+										/>
+										{team.name}
 									</div>
 								))}
 							</div>
