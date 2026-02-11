@@ -4,6 +4,7 @@ import { Hero } from "../../components/ui/hero";
 import { Navbar } from "../../components/ui/navbar";
 import { StatsTicker } from "../../components/ui/stats-ticker";
 import { ExploreSection } from "../../components/ui/explore-section";
+import { GreatestMoments } from "../../components/ui/greatest-moments";
 import { Timeline } from "../../components/ui/timeline";
 import { LeagueSection } from "../../components/ui/league-section";
 import { Footer } from "../../components/ui/footer";
@@ -13,7 +14,7 @@ const nbaHeadshot = (id) =>
 
 const players = [
 	{
-		img: "/images/lebron-3.jpg",
+		img: nbaHeadshot(2544),
 		title: "LEBRON JAMES",
 		subtitle: "THE KING",
 		number: "23",
@@ -37,11 +38,11 @@ const players = [
 		],
 	},
 	{
-		img: "/images/curry-teste1.jpg",
+		img: nbaHeadshot(201939),
 		title: "STEPHEN CURRY",
 		subtitle: "CHEF CURRY",
 		number: "30",
-		bio: "O maior arremessador de três pontos da história da NBA. Stephen Curry revolucionou o basquete moderno e liderou o Golden State Warriors a 4 títulos, mudando para sempre como o jogo é jogado.",
+		bio: "O maior arremessador da história da NBA. Stephen Curry revolucionou o basquete moderno e liderou o Golden State Warriors a 4 títulos, mudando para sempre como o jogo é jogado.",
 		stats: [
 			{ value: "3.7K+", label: "BOLAS DE 3" },
 			{ value: "4x", label: "CAMPEÃO" },
@@ -53,7 +54,7 @@ const players = [
 		title: "NIKOLA JOKIĆ",
 		subtitle: "THE JOKER",
 		number: "15",
-		bio: "O Coringa de Sombor. Nikola Jokić é o pivô mais habilidoso da história, com visão de armador num corpo de 2.11m. Três vezes MVP e campeão em 2023, ele redefiniu a posição de pivô.",
+		bio: "Nikola Jokić é o pivô mais habilidoso da história, com visão de armador num corpo de 2.11m, revolucionou a posição em que joga. Três vezes MVP e campeão em 2023, ele redefiniu a posição de pivô.",
 		stats: [
 			{ value: "3x", label: "MVP" },
 			{ value: "1x", label: "CAMPEÃO" },
@@ -61,7 +62,7 @@ const players = [
 		],
 	},
 	{
-		img: "/images/doncic-teste.webp",
+		img: nbaHeadshot(1629029),
 		title: "LUKA DONČIĆ",
 		subtitle: "THE MAGICIAN",
 		number: "77",
@@ -77,7 +78,7 @@ const players = [
 		title: "SHAI GILGEOUS-ALEXANDER",
 		subtitle: "SGA",
 		number: "2",
-		bio: "O assassino silencioso. SGA é o líder do jovem Thunder com um jogo elegante e imparável. Seu mid-range mortal e capacidade de criar jogadas o tornaram o principal candidato a MVP da liga.",
+		bio: "SGA é o líder do jovem Thunder com um jogo elegante e imparável. Seu mid-range mortal e capacidade de criar jogadas o tornaram o principal candidato a MVP da liga.",
 		stats: [
 			{ value: "31.1", label: "PPG" },
 			{ value: "5.5", label: "RPG" },
@@ -85,7 +86,7 @@ const players = [
 		],
 	},
 	{
-		img: "/images/durant-teste1.jpg",
+		img: nbaHeadshot(201142),
 		title: "KEVIN DURANT",
 		subtitle: "THE SLIM REAPER",
 		number: "35",
@@ -101,7 +102,7 @@ const players = [
 		title: "JAYSON TATUM",
 		subtitle: "THE PROBLEM",
 		number: "0",
-		bio: "A estrela dos Celtics. Jayson Tatum liderou Boston ao 18º título em 2024, consolidando-se como um dos melhores jogadores da liga com seu jogo completo dos dois lados da quadra.",
+		bio: "Jayson Tatum liderou Boston ao 18º título em 2024, consolidando-se como um dos jovens melhores jogadores da liga com seu jogo completo dos dois lados da quadra.",
 		stats: [
 			{ value: "26.9", label: "PPG" },
 			{ value: "1x", label: "CAMPEÃO" },
@@ -113,7 +114,7 @@ const players = [
 		title: "ANTHONY EDWARDS",
 		subtitle: "ANT-MAN",
 		number: "5",
-		bio: "O futuro da NBA. Anthony Edwards combina atleticismo explosivo com carisma magnético, sendo comparado aos maiores craques da história com apenas 23 anos. Enterradas impossíveis são sua assinatura.",
+		bio: "Anthony Edwards combina atleticismo,  com trashtalk, sendo comparado aos maiores craques da história com apenas 23 anos. Enterradas impossíveis são sua assinatura.",
 		stats: [
 			{ value: "25.4", label: "PPG" },
 			{ value: "5.8", label: "RPG" },
@@ -125,7 +126,7 @@ const players = [
 		title: "JA MORANT",
 		subtitle: "TOO SMALL",
 		number: "12",
-		bio: "O showman de Memphis. Ja Morant desafia a gravidade com enterradas impossíveis e joga com uma intensidade que eletriza qualquer arena. Seu atleticismo é de outro planeta.",
+		bio: "O rei das enterradas, Ja Morant desafia a gravidade e joga com uma intensidade que eletriza qualquer arena. Seu atleticismo é de outro planeta.",
 		stats: [
 			{ value: "24.7", label: "PPG" },
 			{ value: "5.6", label: "RPG" },
@@ -149,7 +150,7 @@ const players = [
 		title: "DEVIN BOOKER",
 		subtitle: "D-BOOK",
 		number: "1",
-		bio: "O Mamba de Phoenix. Devin Booker é um pontuador de elite com sangue frio nos momentos decisivos. Autor de 70 pontos em um jogo, ele honra o legado dos maiores scorers da história.",
+		bio: "Devin Booker é um pontuador de elite com sangue frio nos momentos decisivos. Autor de 70 pontos em um jogo, ele honra o legado dos maiores scorers da história.",
 		stats: [
 			{ value: "70", label: "PTS RECORDE" },
 			{ value: "26.4", label: "PPG" },
@@ -166,7 +167,7 @@ const CarouselCard = ({ player, onClick }) => (
 		{/* Gradient background — visible through headshot transparency */}
 		<div className="from-nba-blue/30 via-nba-deep to-nba-navy absolute inset-0 bg-gradient-to-b" />
 
-		{/* Player image */}
+		{/* Imagens Jogadores */}
 		<img
 			src={player.img}
 			alt={player.title}
@@ -180,14 +181,14 @@ const CarouselCard = ({ player, onClick }) => (
 		{/* Vignette edges */}
 		<div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.4)]" />
 
-		{/* Number watermark */}
+		{/* Marca d´agua Numero */}
 		{player.number && (
 			<div className="font-bebas group-hover:text-nba-gold/15 absolute top-3 right-4 text-6xl leading-none text-white/[0.04] transition-all duration-500 md:text-7xl">
 				{player.number}
 			</div>
 		)}
 
-		{/* Content */}
+		{/* Conteudo */}
 		<div className="relative z-10 p-5">
 			{player.subtitle && (
 				<span className="font-dm text-nba-gold mb-1 inline-block translate-y-3 text-[10px] font-medium tracking-[0.2em] opacity-0 transition-all delay-75 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -238,7 +239,7 @@ const PlayersSection = ({ onSelectPlayer, isModalOpen }) => {
 			<div className="from-nba-blue/5 pointer-events-none absolute top-0 right-0 h-full w-1/3 bg-gradient-to-l to-transparent" />
 			<div className="from-nba-red/3 pointer-events-none absolute bottom-0 left-0 h-1/2 w-1/4 bg-gradient-to-tr to-transparent" />
 
-			{/* Section header */}
+			{/* Header dos Cards - Titulo */}
 			<div className="mx-auto max-w-7xl px-6">
 				<div
 					className={`mb-20 transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
@@ -254,10 +255,8 @@ const PlayersSection = ({ onSelectPlayer, isModalOpen }) => {
 						</div>
 						<div className="hidden md:block">
 							<div className="font-dm text-nba-silver/30 text-right text-sm">
-								<span className="text-nba-gold">
-									{players.length}
-								</span>{" "}
-								ESTRELAS EM DESTAQUE
+								<span className="text-nba-gold">{players.length}</span> ESTRELAS
+								EM DESTAQUE
 							</div>
 						</div>
 					</div>
@@ -265,13 +264,12 @@ const PlayersSection = ({ onSelectPlayer, isModalOpen }) => {
 				</div>
 			</div>
 
-			{/* Infinite Carousel — full bleed */}
+			{/* Carrosel Infinito*/}
 			<div
 				className={`relative overflow-hidden transition-all delay-300 duration-1000 ${visible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
-				onMouseEnter={() => setIsPaused(true)}
 				onMouseLeave={() => setIsPaused(false)}
 			>
-				{/* Fade edges */}
+				{/* Bordas Desbotadas */}
 				<div className="from-nba-deep pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-16 bg-gradient-to-r to-transparent md:w-40" />
 				<div className="from-nba-deep pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-16 bg-gradient-to-l to-transparent md:w-40" />
 
@@ -293,12 +291,12 @@ const PlayersSection = ({ onSelectPlayer, isModalOpen }) => {
 				</div>
 			</div>
 
-			{/* Scroll hint */}
+			{/* Texto abaixo dos Players Cards */}
 			<div
 				className={`mt-10 text-center transition-all delay-500 duration-700 ${visible ? "opacity-100" : "opacity-0"}`}
 			>
-				<span className="font-dm text-nba-silver/25 text-[10px] tracking-[0.4em]">
-					PASSE O MOUSE PARA PAUSAR • CLIQUE PARA VER PERFIL
+				<span className="font-dm text-nba-white/75 text-[10px] tracking-[0.4em]">
+					• CLIQUE PARA VER PERFIL DO JOGADOR •
 				</span>
 			</div>
 		</section>
@@ -313,11 +311,9 @@ const IndexPage = () => {
 			<Navbar />
 			<Hero />
 			<StatsTicker />
-			<PlayersSection
-				onSelectPlayer={setSelected}
-				isModalOpen={!!selected}
-			/>
+			<PlayersSection onSelectPlayer={setSelected} isModalOpen={!!selected} />
 			<ExploreSection />
+			<GreatestMoments />
 			<Timeline />
 			<LeagueSection />
 			<Footer />

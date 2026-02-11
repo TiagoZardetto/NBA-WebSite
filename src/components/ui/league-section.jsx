@@ -22,27 +22,41 @@ const LeagueSection = () => {
 		{
 			name: "CONFERÊNCIA LESTE",
 			teams: [
-				{ name: "Boston Celtics", logo: nbaLogoUrl(1610612738) },
-				{ name: "Milwaukee Bucks", logo: nbaLogoUrl(1610612749) },
-				{ name: "Philadelphia 76ers", logo: nbaLogoUrl(1610612755) },
-				{ name: "Miami Heat", logo: nbaLogoUrl(1610612748) },
-				{ name: "New York Knicks", logo: nbaLogoUrl(1610612752) },
-				{ name: "Cleveland Cavaliers", logo: nbaLogoUrl(1610612739) },
-				{ name: "Brooklyn Nets", logo: nbaLogoUrl(1610612751) },
 				{ name: "Atlanta Hawks", logo: nbaLogoUrl(1610612737) },
+				{ name: "Boston Celtics", logo: nbaLogoUrl(1610612738) },
+				{ name: "Brooklyn Nets", logo: nbaLogoUrl(1610612751) },
+				{ name: "Charlotte Hornets", logo: nbaLogoUrl(1610612766) },
+				{ name: "Chicago Bulls", logo: nbaLogoUrl(1610612741) },
+				{ name: "Cleveland Cavaliers", logo: nbaLogoUrl(1610612739) },
+				{ name: "Detroit Pistons", logo: nbaLogoUrl(1610612765) },
+				{ name: "Indiana Pacers", logo: nbaLogoUrl(1610612754) },
+				{ name: "Miami Heat", logo: nbaLogoUrl(1610612748) },
+				{ name: "Milwaukee Bucks", logo: nbaLogoUrl(1610612749) },
+				{ name: "New York Knicks", logo: nbaLogoUrl(1610612752) },
+				{ name: "Orlando Magic", logo: nbaLogoUrl(1610612753) },
+				{ name: "Philadelphia 76ers", logo: nbaLogoUrl(1610612755) },
+				{ name: "Toronto Raptors", logo: nbaLogoUrl(1610612761) },
+				{ name: "Washington Wizards", logo: nbaLogoUrl(1610612764) },
 			],
 		},
 		{
 			name: "CONFERÊNCIA OESTE",
 			teams: [
-				{ name: "Denver Nuggets", logo: nbaLogoUrl(1610612743) },
-				{ name: "Los Angeles Lakers", logo: nbaLogoUrl(1610612747) },
-				{ name: "Golden State Warriors", logo: nbaLogoUrl(1610612744) },
-				{ name: "Phoenix Suns", logo: nbaLogoUrl(1610612756) },
 				{ name: "Dallas Mavericks", logo: nbaLogoUrl(1610612742) },
-				{ name: "Oklahoma City Thunder", logo: nbaLogoUrl(1610612760) },
+				{ name: "Denver Nuggets", logo: nbaLogoUrl(1610612743) },
+				{ name: "Golden State Warriors", logo: nbaLogoUrl(1610612744) },
+				{ name: "Houston Rockets", logo: nbaLogoUrl(1610612745) },
+				{ name: "Los Angeles Clippers", logo: nbaLogoUrl(1610612746) },
+				{ name: "Los Angeles Lakers", logo: nbaLogoUrl(1610612747) },
+				{ name: "Memphis Grizzlies", logo: nbaLogoUrl(1610612763) },
 				{ name: "Minnesota Timberwolves", logo: nbaLogoUrl(1610612750) },
+				{ name: "New Orleans Pelicans", logo: nbaLogoUrl(1610612740) },
+				{ name: "Oklahoma City Thunder", logo: nbaLogoUrl(1610612760) },
+				{ name: "Phoenix Suns", logo: nbaLogoUrl(1610612756) },
+				{ name: "Portland Trail Blazers", logo: nbaLogoUrl(1610612757) },
 				{ name: "Sacramento Kings", logo: nbaLogoUrl(1610612758) },
+				{ name: "San Antonio Spurs", logo: nbaLogoUrl(1610612759) },
+				{ name: "Utah Jazz", logo: nbaLogoUrl(1610612762) },
 			],
 		},
 	];
@@ -86,7 +100,7 @@ const LeagueSection = () => {
 				</div>
 
 				{/* Conferences grid */}
-				<div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+				<div className="grid grid-cols-1 gap-16">
 					{conferences.map((conf, ci) => (
 						<div
 							key={conf.name}
@@ -96,7 +110,7 @@ const LeagueSection = () => {
 							<h3 className="font-bebas text-nba-gold mb-6 text-2xl tracking-wider">
 								{conf.name}
 							</h3>
-							<div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+							<div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
 								{conf.teams.map((team, ti) => (
 									<div
 										key={team.name}

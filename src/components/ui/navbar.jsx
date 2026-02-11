@@ -13,6 +13,7 @@ const Navbar = () => {
 	const navLinks = [
 		{ label: "INÍCIO", href: "#hero" },
 		{ label: "JOGADORES", href: "#players" },
+		{ label: "MOMENTOS", href: "#moments" },
 		{ label: "HISTÓRIA", href: "#history" },
 		{ label: "A LIGA", href: "#league" },
 	];
