@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 
 const moments = [
 	{
-		id: "VkGT5XMEetQ",
+		id: "MlzL6bT1C2U",
 		title: "THE LAST SHOT",
 		description:
-			"O arremesso final de Jordan nas Finais de 1998 selou seu sexto título e encerrou a era mais dominante da história da NBA.",
+			"O arremesso final de Jordan nas Finais de 1998, consagrando seu sexto título e encerrando a era e o time mais dominante da história da NBA!",
 		year: "1998",
 		player: "MICHAEL JORDAN",
 	},
@@ -13,57 +13,65 @@ const moments = [
 		id: "wV9CMVdY3dM",
 		title: "81 POINTS",
 		description:
-			"Kobe Bryant marcou 81 pontos contra o Toronto Raptors, a segunda maior pontuação individual em um único jogo na história da NBA.",
+			"Kobe marcou 81 pontos contra o Toronto Raptors, a segunda maior pontuação individual em um único jogo na história da NBA!",
 		year: "2006",
 		player: "KOBE BRYANT",
 	},
 	{
-		id: "wgVOgGLtPtc",
-		title: "THE BLOCK",
+		id: "Hgade7_mjHc",
+		title: "THE CHASEDOWN BLOCK",
 		description:
-			"O bloqueio de LeBron sobre Iguodala no Game 7 das Finais de 2016 ajudou Cleveland a conquistar seu primeiro título.",
+			"O bloqueio de LeBron sobre Iguodala no Game 7 das Finais de 2016 ajudou o Cleveland a conquistar seu primeiro título de NBA!",
 		year: "2016",
 		player: "LEBRON JAMES",
 	},
 	{
-		id: "GEMVGHoenXM",
+		id: "uC0VY3EeBnA",
 		title: "BANG! BANG!",
 		description:
-			"O arremesso de três pontos de Curry no overtime contra o Oklahoma City Thunder arrancou o icônico 'Bang! Bang!' de Mike Breen.",
+			"O arremesso de três pontos de Curry no overtime contra o Oklahoma City Thunder arrancou o icônico 'Bang! Bang!",
 		year: "2016",
 		player: "STEPHEN CURRY",
 	},
 	{
-		id: "FVYPsEDWcXs",
-		title: "RAY ALLEN'S MIRACLE",
+		id: "nFQy-qmyotc",
+		title: "RAY ALLEN'S CLUTCH 3",
 		description:
-			"O arremesso de três de Ray Allen no canto da quadra no Game 6 das Finais de 2013 salvou o Miami Heat da eliminação.",
+			"O absurdo arremesso de Ray Allen no canto da quadra no Game 6 das Finais de 2013 salvando o Miami Heat da eliminação!",
 		year: "2013",
 		player: "RAY ALLEN",
 	},
 	{
-		id: "ChT3ewZXTfM",
+		id: "ojM9nVvigyA",
 		title: "THE BUZZER BEATER",
 		description:
-			"O arremesso de Kawhi que quicou quatro vezes no aro antes de entrar, eliminando os 76ers nas semifinais de 2019.",
+			"O arremesso de Kawhi que quicou quatro vezes no aro antes de entrar, eliminando os 76ers nas semifinais de 2019 e posteriormente se sagrando campeão com os Raptors!",
 		year: "2019",
 		player: "KAWHI LEONARD",
 	},
 	{
-		id: "XMrPjl-927Q",
-		title: "DUNK OF DEATH",
+		id: "HMm5NtXLVDY",
+		title: "BUZZER BEATER DE LILLARD",
 		description:
-			"Vince Carter saltou sobre o francês de 2.18m Frédéric Weis nas Olimpíadas de 2000, criando a enterrada mais icônica da história.",
-		year: "2000",
-		player: "VINCE CARTER",
+			"O arremesso de três pontos absurdo de Damian Lillard no último segundo classificando o Blazers para a próxima fase.",
+		year: "2019",
+		player: "DAMIAN LILLARD",
 	},
 	{
-		id: "22O2lApCBBs",
-		title: "THE DREAM SHAKE",
+		id: "HK1Ltjl_7xk",
+		title: "SHAQUILLE O´NEAL QUEBRA TABELA",
 		description:
-			"Os movimentos de Hakeem Olajuwon nas Finais de 1995 contra o Orlando Magic mostraram o footwork mais letal da história.",
-		year: "1995",
-		player: "HAKEEM OLAJUWON",
+			"Shaq quebrou a tabela com uma enterrada durante um jogo em 1993, mostrando toda sua força NBA.",
+		year: "1993",
+		player: "SHAQUILLE O´NEAL",
+	},
+	{
+		id: "Z7O563TE6aY",
+		title: "HALIBURTON CHOKE CELEBRATION",
+		description:
+			"Haliburton faz a cesta da vitória e homenageia o famoso 'choke celebration' de Reggie Miller",
+		year: "2025",
+		player: "TYRESE HALIBURTON",
 	},
 ];
 
@@ -71,9 +79,7 @@ const MomentCard = ({ moment, index, visible, onClick }) => (
 	<div
 		onClick={onClick}
 		className={`group relative cursor-pointer overflow-hidden rounded-lg transition-all duration-700 ${
-			visible
-				? "translate-y-0 opacity-100"
-				: "translate-y-8 opacity-0"
+			visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
 		}`}
 		style={{ transitionDelay: `${200 + index * 100}ms` }}
 	>
@@ -105,7 +111,7 @@ const MomentCard = ({ moment, index, visible, onClick }) => (
 
 			{/* Play button */}
 			<div className="absolute inset-0 flex items-center justify-center">
-				<div className="border-nba-gold/60 bg-nba-gold/10 flex h-14 w-14 items-center justify-center rounded-full border-2 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:scale-100 group-hover:opacity-100 md:h-16 md:w-16">
+				<div className="border-nba-gold/60 bg-nba-gold/50 flex h-14 w-14 items-center justify-center rounded-full border-2 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:scale-100 group-hover:opacity-100 md:h-16 md:w-16">
 					<svg
 						className="text-nba-gold ml-1 h-6 w-6"
 						fill="currentColor"
@@ -244,7 +250,7 @@ const GreatestMoments = () => {
 		<section id="moments" ref={ref} className="bg-nba-deep relative py-32">
 			{/* Background accents */}
 			<div className="from-nba-red/5 pointer-events-none absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r to-transparent" />
-			<div className="from-nba-blue/5 pointer-events-none absolute bottom-0 right-0 h-1/2 w-1/4 bg-gradient-to-tl to-transparent" />
+			<div className="from-nba-blue/5 pointer-events-none absolute right-0 bottom-0 h-1/2 w-1/4 bg-gradient-to-tl to-transparent" />
 
 			<div className="mx-auto max-w-7xl px-6">
 				{/* Header */}
@@ -262,8 +268,8 @@ const GreatestMoments = () => {
 						</div>
 						<div className="hidden md:block">
 							<div className="font-dm text-nba-silver/30 text-right text-sm">
-								<span className="text-nba-gold">{moments.length}</span>{" "}
-								MOMENTOS LENDÁRIOS
+								<span className="text-nba-gold">{moments.length}</span> MOMENTOS
+								LENDÁRIOS
 							</div>
 						</div>
 					</div>
@@ -295,10 +301,7 @@ const GreatestMoments = () => {
 
 			{/* Video Modal */}
 			{selected && (
-				<VideoModal
-					moment={selected}
-					onClose={() => setSelected(null)}
-				/>
+				<VideoModal moment={selected} onClose={() => setSelected(null)} />
 			)}
 		</section>
 	);
