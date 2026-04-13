@@ -36,5 +36,5 @@ Este projeto foi um excelente aprendizado para:
 
 1. Faça o clone do repositório:
    ```bash
-   git clone https://github.com/TiagoZardetto/NBA-landingpage.git
+   git clone https://github.com/TiagoZardetto/NBA-WebSite.git
 
