@@ -89,14 +89,6 @@ const Footer = () => {
 					<p className="font-dm text-nba-silver/30 text-xs">
 						© 2025 NBA Journey — Projeto educacional. Não afiliado à NBA.
 					</p>
-					<div className="flex gap-6">
-						<span className="font-dm text-nba-silver/30 text-xs">
-							React + Tailwind
-						</span>
-						<span className="font-dm text-nba-silver/30 text-xs">
-							Feito com 🏀
-						</span>
-					</div>
 				</div>
 			</div>
 		</footer>
