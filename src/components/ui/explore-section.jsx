@@ -18,25 +18,21 @@ const ExploreSection = () => {
 
 	const categories = [
 		{
-			icon: "🏆",
 			title: "Maiores Campeões",
 			description:
 				"Conheça as dinastias que dominaram a liga e definiram eras inteiras do basquete profissional.",
 		},
 		{
-			icon: "🔥",
 			title: "Finais Históricas",
 			description:
 				"Reviva os confrontos mais épicos das Finais da NBA que ficaram marcados na história.",
 		},
 		{
-			icon: "⭐",
 			title: "Jogadores Lendários",
 			description:
 				"De Jordan a LeBron, os atletas que transcenderam o esporte e se tornaram ícones globais.",
 		},
 		{
-			icon: "📊",
 			title: "Recordes da NBA",
 			description:
 				"Os números mais impressionantes já registrados nas quadras da maior liga do mundo.",
@@ -62,8 +58,8 @@ const ExploreSection = () => {
 						<span className="text-outline">DA LIGA</span>
 					</h2>
 					<p className="font-dm text-nba-silver/50 mx-auto mt-6 max-w-lg text-base">
-						Fique por dentro do universo do basquete profissional. Histórias,
-						recordes e muito mais.
+						Fique por dentro do universo da NBA. Histórias, recordes e muito
+						mais.
 					</p>
 				</div>
 
@@ -75,11 +71,7 @@ const ExploreSection = () => {
 							className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
 							style={{ transitionDelay: `${200 + i * 100}ms` }}
 						>
-							<Information
-								icon={cat.icon}
-								title={cat.title}
-								description={cat.description}
-							/>
+							<Information title={cat.title} description={cat.description} />
 						</div>
 					))}
 				</div>
