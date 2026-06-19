@@ -3,7 +3,10 @@
 Este projeto consiste na criação de uma **landing page** inspirada na NBA, desenvolvida com **React.Js** e **TailwindCSS**. 
 O objetivo do projeto é proporcionar uma interface moderna e atrativa para fãs de basquete, com foco em design visual, responsividade e interatividade, e também agregar aos meus estudos no framework **React.Js**.
 
-## 🎯 Objetivos
+## 🖥️ Acesse o projeto através do link:
+https://nba-web-site.vercel.app/
+
+## 🎯 Objetivos do projeto
 
 - Praticar os fundamentos de **React.Js** e **TailwindCSS**.
 - Aplicar o **TailwindCss** para garantir design responsivo, consistência visual e propriedades modernas de Design.
@@ -27,14 +30,10 @@ O objetivo do projeto é proporcionar uma interface moderna e atrativa para fãs
 
 Este projeto foi um excelente aprendizado para:
 
-- Estruturação de layout com **React.Js**.
+- Estruturação de layouts com **React.Js**.
+- Reutilização de components **React.Js**
 - Utilização de **useStates**.
 - Manipulação de componentes **TailwindCSS**, como grid´s, carrossel, navbar, botões interativos e ícones SVG.
 - Harmonização visual com **paleta vibrante**, tipografia chamativa lembrando a NBA, imagens de alta qualidade e vídeos extraídos do Youtube.
 
-## 🖥️ Como Rodar Localmente
-
-1. Faça o clone do repositório:
-   ```bash
-   git clone https://github.com/TiagoZardetto/NBA-WebSite.git
 
