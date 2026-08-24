@@ -17,7 +17,7 @@ https://nba-web-site.vercel.app/
 
 - **Hero Section:** Banner principal com chamada para ação e visual impactante.
 - **Seções Destaques | Jogadores:**. Carousel com fotos e informações dos principais jogadores da liga.
-- **Momentos Marcantes**: Uma lista dos principais momentos da história da NBA, com vídeos retirados diretamente do Youtube
+- **Momentos Marcantes**: Uma lista dos principais momentos da história da NBA, com vídeos retirados diretamente do Youtube.
 - **Grid Responsivo:** Estruturei os conteúdos dos Times utilizando o sistema de grid, adaptável a diversos tamanhos de tela.
 - **Seção | História da Liga**: Design interativo com scroll, trazendo informações de como a Liga começou, até os dias atuais.
 
@@ -34,6 +34,5 @@ Este projeto foi um excelente aprendizado para:
 - Reutilização de components **React.Js**
 - Utilização de **useStates**.
 - Manipulação de componentes **TailwindCSS**, como grid´s, carrossel, navbar, botões interativos e ícones SVG.
-- Harmonização visual com **paleta vibrante**, tipografia chamativa lembrando a NBA, imagens de alta qualidade e vídeos extraídos do Youtube.
 
 
