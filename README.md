@@ -1,10 +1,7 @@
 # 🏀 NBA WebSite | História da Liga | Principais Jogadores | Momentos Marcantes da NBA.
 
 Este projeto consiste na criação de uma **landing page** inspirada na NBA, desenvolvida com **React.Js**, **TypeScript** e **TailwindCSS**. 
-O objetivo do projeto é proporcionar uma interface moderna e atrativa para fãs de basquete, com foco em design visual, responsividade e interatividade, e também agregar aos meus estudos no framework **React.Js**.
-
-## 🖥️ Acesse o projeto através do link:
-https://nba-web-site.vercel.app/
+O objetivo do projeto é proporcionar uma interface moderna e atrativa para fãs de basquete.
 
 ## 🎯 Objetivos do projeto
 
@@ -34,5 +31,8 @@ https://nba-web-site.vercel.app/
 - Reutilização de components **React.Js**
 - Utilização de **useStates**.
 - Manipulação de componentes **TailwindCSS**, como grid´s, carrossel, navbar, botões interativos e ícones SVG.
+
+## 🖥️ Acesse o projeto através do link:
+https://nba-web-site.vercel.app/
 
 
