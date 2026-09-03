@@ -1,6 +1,7 @@
-# 🏀 NBA WebSite | História da Liga | Principais Jogadores | Momentos Marcantes da NBA.
+# 🏀 NBA WebSite
 
-Landing page inspirada na NBA, desenvolvida para praticar **React, Tailwind CSS e desenvolvimento de interfaces responsivas**.
+Landing page page responsiva sobre a história da NBA, seus principais jogadores e momentos marcantes. 
+Desenvolvida para praticar **React, Tailwind CSS e desenvolvimento de interfaces responsivas** e **Testes funcionais**
 
 ## 🎯 Sobre o projeto
 
