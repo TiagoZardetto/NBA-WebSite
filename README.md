@@ -23,8 +23,9 @@ O projeto apresenta diferentes conteúdos relacionados à NBA, utilizando compon
 * Interface adaptada para diferentes tamanhos de tela
 
 ## 📸 Preview
+<img width="1913" height="916" alt="image" src="https://github.com/user-attachments/assets/97bc9ba3-b4e0-4045-95ce-8200ba4d6d92" />
 
-> Adicionar aqui uma screenshot da aplicação.
+<img width="1913" height="916" alt="Adobe Express - 2026-09-03 16-55-20" src="https://github.com/user-attachments/assets/cd5e4738-c254-4d60-bba5-2af30caf1e34" />
 
 
 ## 🖥️ Acesse o projeto através do link:
