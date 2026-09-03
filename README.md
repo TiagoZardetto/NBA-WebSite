@@ -1,36 +1,31 @@
 # 🏀 NBA WebSite | História da Liga | Principais Jogadores | Momentos Marcantes da NBA.
 
-Este projeto consiste na criação de uma **landing page** inspirada na NBA, desenvolvida com **React.Js**, **TypeScript** e **TailwindCSS**. 
-O objetivo do projeto é proporcionar uma interface moderna e atrativa para fãs de basquete.
+Landing page inspirada na NBA, desenvolvida para praticar **React, Tailwind CSS e desenvolvimento de interfaces responsivas**.
 
-## 🎯 Objetivos do projeto
+## 🎯 Sobre o projeto
 
-- Praticar os fundamentos de **React.Js** e **TailwindCSS**.
-- Componentização e organização com **React.Js**.
-- Gerenciamento de estados.
-- Aplicar o **TailwindCss** para garantir design responsivo, consistência visual e propriedades modernas de Design.
-- Trazer informações relevantes dos principais jogadores da liga.
-- Relembrar momentos marcante da NBA.
+O projeto apresenta diferentes conteúdos relacionados à NBA, utilizando componentes reutilizáveis, layouts responsivos e elementos interativos.
 
-## 🎨 Funcionalidades e Seções
+## 🛠️ Tecnologias
 
-- **Hero Section:** Banner principal com chamada para ação e visual impactante.
-- **Seções Destaques | Jogadores:**. Carousel com fotos e informações dos principais jogadores da liga.
-- **Momentos Marcantes**: Uma lista dos principais momentos da história da NBA, com cortes de vídeos retirados diretamente do Youtube.
-- **Grid Responsivo:** Estruturei os conteúdos dos Times utilizando o sistema de grid, adaptável a diversos tamanhos de tela.
-- **Seção | História da Liga**: Design interativo com scroll, trazendo informações de como a Liga começou, até os dias atuais.
+* React
+* JavaScript
+* Tailwind CSS
+* Vite
 
-## 🛠 Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- 🧱 **ReactJS** (Componentes)
-- 🎨 **TailwindCss** (Grid e Responsividades)
+* Layout responsivo
+* Navegação entre seções
+* Componentização com React
+* Cards e elementos interativos
+* Galeria de imagens
+* Interface adaptada para diferentes tamanhos de tela
 
-## 📚 Aprendizados
+## 📸 Preview
 
-- Estruturação de layouts com **React.Js**.
-- Reutilização de components **React.Js**
-- Utilização de **useStates**.
-- Manipulação de componentes **TailwindCSS**, como grid´s, carrossel, navbar, botões interativos e ícones SVG.
+> Adicionar aqui uma screenshot da aplicação.
+
 
 ## 🖥️ Acesse o projeto através do link:
 https://nba-web-site.vercel.app/
